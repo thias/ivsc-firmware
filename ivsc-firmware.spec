@@ -1,14 +1,14 @@
 %global debug_package %{nil}
 
-%global commit 29c5eff4cdaf83e90ef2dcd2035a9cdff6343430
-%global commitdate 20221102
+%global commit 10c214fea5560060d387fbd2fb8a1af329cb6232
+%global commitdate 20230811
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           ivsc-firmware
 Summary:        Intel iVSC firmware
 URL:            https://github.com/intel/ivsc-firmware
 Version:        0.0
-Release:        5.%{commitdate}git%{shortcommit}%{?dist}
+Release:        6.%{commitdate}git%{shortcommit}%{?dist}
 License:        Proprietary
 
 Source0:        https://github.com/intel/%{name}/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
@@ -39,6 +39,9 @@ popd
 %{_prefix}/lib/firmware/vsc/
 
 %changelog
+* Tue Oct 10 2023 Matthias Saou <matthias@saou.eu> 0.0-6.20230811git10c214f
+- Update to 10c214fea5560060d387fbd2fb8a1af329cb6232.
+
 * Thu Aug 03 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.0-5.20221102git29c5eff
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 
